@@ -8,4 +8,5 @@ class CountVowels(unittest.TestCase):
     def test_1(self):
         pass
 
-#python -m unittest unittest_vowels.py pra realizar os testes
+if __name__ == '__main__':
+    unittest.main()

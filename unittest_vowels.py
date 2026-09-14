@@ -14,6 +14,18 @@ class CountVowels(unittest.TestCase):
     def testNoVowels(self):
         self.assertEqual(count_vowels("wxyz"), 0)
 
+    # Teste se símbolos são ignorados sem interferir na contagem das vogais.
+    def testSymbols(self):
+        self.assertEqual(count_vowels("a!e@i#o$u%"), 5)
+
+    # Teste com letras maiúsculas e minúsculas.
+    def testUpperAndLowerCase(self):
+        self.assertEqual(count_vowels("OpenAI"), 4)
+
+    # Teste com uma frase próxima de uma entrada real da aplicação.
+    def testSentence(self):
+        self.assertEqual(count_vowels("Teste e Validacao de Sistemas!"), 12)
+
 if __name__ == '__main__':
     unittest.main()
 #ou: 'python3 -m unittest unittest_vowels.py -v' no terminal para exibir cada teste separadamente.
